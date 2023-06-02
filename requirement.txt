@@ -1,11 +1,4 @@
-setuptools
-Flask
-gunicorn
+flask
+flask_restx
 tensorflow
-tensorflow-text
-tensorflow-hub
-scikit-learn
 numpy
-Cython
-wheel
-pandas
