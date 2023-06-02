@@ -1,12 +1,18 @@
 from flask import Flask, request
 import predictSymptom
-from flask_restx import Api, Resource
+from flask_restx import Api, Resource, fields
 
 # Initialize Flask
 app = Flask(__name__)
 api = Api(app, title='Diagnese API', description='This is Diagnese API Documentation')
 
-ns = api.namespace('diagnese', description='Namespace description')
+ns = api.namespace('diagnese', description='main route of this API')
+
+input_model = api.model('/diagnese/predict', {
+    'symptom_1': fields.Integer(),
+    'symptom_2': fields.Integer(),
+    'symptom_3': fields.Integer()
+})
 
 
 # Initialize Flask server (file prediction.py)
@@ -18,12 +24,13 @@ def welcome():
 @ns.route('/predict')
 class Prediction(Resource):
     @ns.doc(description='diagnose by symptom')
+    @api.expect(input_model)  # Add this line
     def post(self):
         data = request.get_json()
 
         return predictSymptom.predictSymptom(data)
-    def get(self):
-        
+    
+    def get(self):  
         return predictSymptom.getAllDignosis()
 
 
