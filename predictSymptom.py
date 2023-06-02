@@ -139,6 +139,50 @@ def predictSymptom(data):
             'bekas_luka_berair': 0
         }
 
+        diagnosis = [
+            'AIDS',
+            'Alergi',
+            'Artritis',
+            'Asma Bronkial',
+            'Cacar air',
+            'Demam berdarah',
+            'Diabetes',
+            'GERD',
+            'Gastroenteritis',
+            'Hemoroid dimorfik (ambeien)',
+            'Hepatitis A',
+            'Hepatitis Alkoholik',
+            'Hepatitis B',
+            'Hepatitis C',
+            'Hepatitis D',
+            'Hepatitis E',
+            'Hipertensi',
+            'Hipertiroidisme',
+            'Hipoglikemia',
+            'Hipotiroidisme',
+            'Impetigo',
+            'Infeksi jamur',
+            'Infeksi saluran kemih',
+            'Jerawat',
+            'Kolestasis kronis',
+            'Kuning (penyakit kuning)',
+            'Malaria',
+            'Migraine',
+            'Osteoartritis',
+            'Paralisis (pendarahan otak)',
+            'Penyakit ulkus peptikum',
+            'Pilek biasa',
+            'Pneumonia',
+            'Psoriasis',
+            'Reaksi obat',
+            'Serangan jantung',
+            'Spondilosis Serviks',
+            'Tuberculosis',
+            'Typus',
+            'Varises',
+            'Vertigo Posisional Paroksismal'
+        ]
+
         # Update the symptom dictionary with the received symptoms
         my_symptom.update(data)
 
@@ -160,6 +204,10 @@ def predictSymptom(data):
         # Get max value in array predictions
         max_value = np.max(predictions[0])
 
+        max_value_index = np.argmax(predictions[0])
+
+        print(diagnosis[max_value_index])
+
         print(max_value)
 
         # Return the prediction result
@@ -167,7 +215,8 @@ def predictSymptom(data):
             'status': 'success',
             'code': 201,
             'message': 'Symptom prediction successful!',
-            'input': data
+            'input': data,
+            'diagnosa': diagnosis[max_value_index]
         })
 
     except Exception as e:
