@@ -20,10 +20,10 @@ input_model = api.model('/diagnese/predict', {
 # Initialize Flask server (file prediction.py)
 @app.route("/", methods=["GET"])
 def welcome():
-    return "Welcome to our API"
+    return 'Welcome to our API'
 
 
-@ns.route('/predict')
+@ns.route("/predict")
 class Prediction(Resource):
     @ns.doc(description='diagnose by symptom')
     @api.expect(input_model)  # Add this line
@@ -36,13 +36,13 @@ class Prediction(Resource):
         return predictSymptom.getAllDignosis()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # app.run(host='0.0.0.0', port=8080, debug=True) #uncomment if you want to run on GCP
     # app.run(port=8080, debug=True) #uncomment if you want to run on local
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
 
 
-@api.route('/swagger')
+@api.route("/swagger")
 class Swagger(Resource):
     def get(self):
         return api.__schema__
