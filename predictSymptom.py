@@ -148,17 +148,19 @@ def predictSymptom(data):
         # Convert the symptom dictionary values to a list
         my_symptom_values = list(my_symptom.values())
 
-        # Convert the symptom values to a 2D tensor
-        my_symptom_values = np.array(my_symptom_values)
-        my_symptom_values = np.reshape(my_symptom_values, (1, -1))
+        input_data = tf.convert_to_tensor([my_symptom_values], dtype=tf.float32)
 
-        # # Make predictions using the loaded model
-        predictions = model.predict(my_symptom_values)
+        # Make predictions using the loaded model
+        predictions = model.predict(input_data)
 
-        # Process the predictions as needed
-        # ...
+        # Print the array prediction
+        # print(predictions)
+        print(predictions[0])
 
-        print(predictions)
+        # Get max value in array predictions
+        max_value = np.max(predictions[0])
+
+        print(max_value)
 
         # Return the prediction result
         return jsonify({
