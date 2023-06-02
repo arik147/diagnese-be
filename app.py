@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, request
 import predictSymptom
 from flask_restx import Api, Resource, fields
@@ -36,7 +38,8 @@ class Prediction(Resource):
 
 if __name__ == '__main__':
     # app.run(host='0.0.0.0', port=8080, debug=True) #uncomment if you want to run on GCP
-    app.run(port=8080, debug=True) #uncomment if you want to run on local
+    # app.run(port=8080, debug=True) #uncomment if you want to run on local
+    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
 
 
 @api.route('/swagger')
