@@ -36,7 +36,7 @@ class Prediction(Resource):
     def get(self):  
         return predictSymptom.getAllDignosis()
 
-# Run app
+# Run app main
 if __name__ == "__main__":
     # app.run(host='0.0.0.0', port=8080, debug=True) #uncomment if you want to run on GCP
     # app.run(port=8080, debug=True) #uncomment if you want to run on local
