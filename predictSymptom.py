@@ -2,6 +2,7 @@
 from flask import jsonify
 import tensorflow as tf
 import numpy as np
+import csv
 
 def predictSymptom(data):
     try:
@@ -211,15 +212,22 @@ def predictSymptom(data):
 
         # print(max_value)
 
+        prediksi = diagnosis[max_value_index]
+        deskripsi, dokter_spesialis = getDescriptionAndDoctor(prediksi)
+
+        # print("Deskripsi:", deskripsi)
+        # print("Rekomendasi dokter: Dokter", dokter_spesialis)
+
         # Return the prediction result
         return jsonify({
             'status': 'success',
             'code': 201,
             'message': 'Symptom prediction successful!',
             'data': {
-                'diagnosa': diagnosis[max_value_index]
+                'diagnosa': prediksi,
+                'deskripsi': deskripsi,
+                'dokter_spesialis': dokter_spesialis
             }
-
         })
 
     except Exception as e:
@@ -291,3 +299,11 @@ def getAllDignosis():
             'code': 400,
             'message': 'Error fetching diagnosis!'
         })
+    
+def getDescriptionAndDoctor(prediksi):
+    with open('Deskripsi_dan_Dokter.csv') as file:
+        prognosis = csv.DictReader(file)
+        for row in prognosis:
+            if row['Prognosis'] == prediksi:
+                return row['Deskripsi'], row['Spesialis']
+    return "Penyakit tidak dikenali", "Tidak ada spesialis yang sesuai"
