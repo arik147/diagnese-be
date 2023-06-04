@@ -1,0 +1,207 @@
+[
+  {
+    "prognosis": "Vertigo Posisional Paroksismal",
+    "deskripsi": "Gangguan pada telinga dalam yang menyebabkan sensasi berputar atau pusing secara tiba-tiba ketika posisi kepala berubah.",
+    "spesialis": "Spesialis Telinga, Hidung, dan Tenggorokan"
+  },
+  {
+    "prognosis": "Jerawat",
+    "deskripsi": "Kondisi kulit yang ditandai dengan peradangan pada folikel rambut dan kelenjar minyak di kulit.",
+    "spesialis": "Spesialis Kulit dan Kelamin"
+  },
+  {
+    "prognosis": "AIDS",
+    "deskripsi": "Stadium akhir dari infeksi HIV (Human Immunodeficiency Virus).",
+    "spesialis": "Spesialis Penyakit Menular"
+  },
+  {
+    "prognosis": "Hepatitis Alkoholik",
+    "deskripsi": "Peradangan pada hati yang disebabkan oleh konsumsi alkohol yang berlebihan dan kronis.",
+    "spesialis": "Spesialis Penyakit Hati"
+  },
+  {
+    "prognosis": "Alergi",
+    "deskripsi": "Respons yang berlebihan dari sistem kekebalan tubuh terhadap zat asing, seperti debu, serbuk sari, atau makanan tertentu.",
+    "spesialis": "Spesialis Alergi dan Imunologi"
+  },
+  {
+    "prognosis": "Artritis",
+    "deskripsi": "Peradangan pada sendi yang menyebabkan rasa nyeri, pembengkakan, dan kekakuan pada sendi-sendi tubuh.",
+    "spesialis": "Spesialis Reumatologi"
+  },
+  {
+    "prognosis": "Asma Bronkial",
+    "deskripsi": "Penyakit paru-paru kronis yang ditandai dengan penyempitan saluran pernapasan, mengakibatkan kesulitan bernapas, batuk, dan sesak napas.",
+    "spesialis": "Spesialis Paru-paru"
+  },
+  {
+    "prognosis": "Spondilosis Serviks",
+    "deskripsi": "Degenerasi pada tulang belakang leher yang umumnya terjadi karena penuaan.",
+    "spesialis": "Spesialis Tulang Belakang"
+  },
+  {
+    "prognosis": "Cacar air",
+    "deskripsi": "Infeksi virus yang ditandai dengan munculnya ruam merah berisi cairan pada kulit dan demam ringan.",
+    "spesialis": "Spesialis Penyakit Infeksi"
+  },
+  {
+    "prognosis": "Kolestasis kronis",
+    "deskripsi": "Kondisi di mana aliran empedu dari hati terganggu, yang dapat menyebabkan penumpukan zat-zat beracun dalam tubuh dan gejala seperti gatal-gatal, kulit kuning, dan urine berwarna gelap.",
+    "spesialis": "Spesialis Penyakit Hati"
+  },
+  {
+    "prognosis": "Pilek biasa",
+    "deskripsi": "Infeksi virus pada saluran pernapasan bagian atas yang menyebabkan hidung tersumbat, pilek, dan batuk ringan.",
+    "spesialis": "Spesialis Penyakit Infeksi"
+  },
+  {
+    "prognosis": "Demam berdarah",
+    "deskripsi": "Penyakit yang disebabkan oleh infeksi virus dengue yang ditularkan melalui gigitan nyamuk.",
+    "spesialis": "Spesialis Penyakit Infeksi"
+  },
+  {
+    "prognosis": "Diabetes",
+    "deskripsi": "Kondisi kronis di mana kadar gula (glukosa) dalam darah tinggi, karena gangguan produksi atau penggunaan hormon insulin.",
+    "spesialis": "Spesialis Endokrinologi"
+  },
+  {
+    "prognosis": "Hemoroid dimorfik (ambeien)",
+    "deskripsi": "Pembengkakan pembuluh darah vena di daerah anus atau rektum yang dapat menyebabkan rasa sakit, gatal, pendarahan, dan ketidaknyamanan saat buang air besar.",
+    "spesialis": "Spesialis Gastroenterologi"
+  },
+  {
+    "prognosis": "Reaksi obat",
+    "deskripsi": "Respons yang tidak diinginkan (efek samping) terhadap penggunaan obat tertentu.",
+    "spesialis": "Spesialis Penyakit Infeksi"
+  },
+  {
+    "prognosis": "Infeksi jamur",
+    "deskripsi": "Merupakan infeksi yang disebabkan oleh jamur yang dapat mempengaruhi berbagai bagian tubuh, termasuk kulit, kuku, dan organ dalam.",
+    "spesialis": "Spesialis Penyakit Kulit dan Kelamin"
+  },
+  {
+    "prognosis": "Gastroenteritis",
+    "deskripsi": "Peradangan pada saluran pencernaan yang disebabkan oleh infeksi virus, bakteri, atau parasit.",
+    "spesialis": "Spesialis Gastroenterologi"
+  },
+  {
+    "prognosis": "GERD",
+    "deskripsi": "Kondisi di mana asam lambung mengalir kembali ke kerongkongan, menyebabkan gejala seperti nyeri dada, sensasi terbakar di dada (heartburn), dan mual.",
+    "spesialis": "Spesialis Gastroenterologi"
+  },
+  {
+    "prognosis": "Serangan jantung",
+    "deskripsi": "Serangan jantung terjadi ketika suplai darah ke jantung terganggu secara tiba-tiba, biasanya karena penyumbatan arteri koroner. Infark miokard; penyakit jantung koroner",
+    "spesialis": "Spesialis Jantung dan Pembuluh Darah"
+  },
+  {
+    "prognosis": "Hepatitis A",
+    "deskripsi": "Penyakit hati yang disebabkan oleh infeksi virus hepatitis A. Penyebarannya terutama melalui makanan atau minuman yang terkontaminasi dengan tinja orang yang terinfeksi.",
+    "spesialis": "Spesialis Penyakit Hati"
+  },
+  {
+    "prognosis": "Hepatitis B",
+    "deskripsi": "Penyakit hati yang disebabkan oleh infeksi virus hepatitis B. Penularan umumnya melalui kontak dengan cairan tubuh yang terinfeksi, seperti darah, air mani, atau cairan vagina.",
+    "spesialis": "Spesialis Penyakit Hati"
+  },
+  {
+    "prognosis": "Hepatitis C",
+    "deskripsi": "Penyakit hati yang disebabkan oleh infeksi virus hepatitis C. Penularan utamanya melalui kontak langsung dengan darah yang terinfeksi, seperti menggunakan jarum suntik yang terkontaminasi atau melalui transfusi darah yang tidak aman.",
+    "spesialis": "Spesialis Penyakit Hati"
+  },
+  {
+    "prognosis": "Hepatitis D",
+    "deskripsi": "Penyakit hati yang disebabkan oleh infeksi virus hepatitis D. Infeksi hepatitis D hanya dapat terjadi pada individu yang sudah terinfeksi dengan virus hepatitis B.",
+    "spesialis": "Spesialis Penyakit Hati"
+  },
+  {
+    "prognosis": "Hepatitis E",
+    "deskripsi": "Penyakit hati yang disebabkan oleh infeksi virus hepatitis E. Penyebarannya terutama melalui konsumsi air atau makanan yang terkontaminasi oleh tinja orang yang terinfeksi.",
+    "spesialis": "Spesialis Penyakit Hati"
+  },
+  {
+    "prognosis": "Hipertensi",
+    "deskripsi": "Tekanan darah tinggi, hipertensi adalah kondisi di mana tekanan darah arteri terus-menerus tinggi.",
+    "spesialis": "Spesialis Kardiologi"
+  },
+  {
+    "prognosis": "Hipertiroidisme",
+    "deskripsi": "Kondisi di mana kelenjar tiroid menghasilkan terlalu banyak hormon tiroid, yang dapat menyebabkan peningkatan metabolisme tubuh dan berbagai gejala lainnya.",
+    "spesialis": "Spesialis Endokrinologi"
+  },
+  {
+    "prognosis": "Hipoglikemia",
+    "deskripsi": "Kondisi di mana kadar gula darah menjadi sangat rendah.",
+    "spesialis": "Spesialis Endokrinologi"
+  },
+  {
+    "prognosis": "Hipotiroidisme",
+    "deskripsi": "Kondisi di mana kelenjar tiroid menghasilkan terlalu sedikit hormon tiroid, yang dapat menyebabkan penurunan metabolisme tubuh dan berbagai gejala lainnya.",
+    "spesialis": "Spesialis Endokrinologi"
+  },
+  {
+    "prognosis": "Impetigo",
+    "deskripsi": "Infeksi kulit yang biasanya disebabkan oleh bakteri Staphylococcus aureus atau Streptococcus pyogenes",
+    "spesialis": "Spesialis Kulit dan Kelamin"
+  },
+  {
+    "prognosis": "Kuning (penyakit kuning)",
+    "deskripsi": "Kondisi di mana kulit dan mata mengalami warna kuning akibat peningkatan kadar bilirubin dalam darah.",
+    "spesialis": "Spesialis Penyakit Hati"
+  },
+  {
+    "prognosis": "Malaria",
+    "deskripsi": "Penyakit yang disebabkan oleh parasit Plasmodium yang ditularkan melalui gigitan nyamuk Anopheles.",
+    "spesialis": "Spesialis Penyakit Infeksi"
+  },
+  {
+    "prognosis": "Migraine",
+    "deskripsi": "Jenis sakit kepala yang menyebabkan nyeri berdenyut di satu sisi kepala, sering disertai dengan mual, muntah, dan sensitivitas terhadap cahaya dan suara",
+    "spesialis": "Spesialis Neurologi"
+  },
+  {
+    "prognosis": "Osteoartritis",
+    "deskripsi": "Bentuk arthritis yang paling umum, yang terjadi ketika lapisan pelindung pada ujung tulang rawan di sendi rusak dan mengalami keausan",
+    "spesialis": "Spesialis Ortopedi"
+  },
+  {
+    "prognosis": "Paralisis (pendarahan otak)",
+    "deskripsi": "Kehilangan kemampuan untuk menggerakkan atau mengendalikan sebagian atau seluruh tubuh",
+    "spesialis": "Spesialis Neurologi"
+  },
+  {
+    "prognosis": "Penyakit ulkus peptikum",
+    "deskripsi": "Kondisi yang ditandai dengan adanya luka atau kerusakan pada dinding lambung, duodenum (bagian pertama usus halus), atau bagian lain dari saluran pencernaan yang terkena asam lambung.",
+    "spesialis": "Spesialis Gastroenterologi"
+  },
+  {
+    "prognosis": "Pneumonia",
+    "deskripsi": "Infeksi yang menyebabkan peradangan pada jaringan paru-paru.",
+    "spesialis": "Spesialis Paru-paru"
+  },
+  {
+    "prognosis": "Psoriasis",
+    "deskripsi": "Penyakit kulit yang kronis, ditandai dengan pembentukan plak kulit yang merah, tebal, bersisik, dan gatal",
+    "spesialis": "Spesialis Kulit dan Kelamin"
+  },
+  {
+    "prognosis": "Tuberculosis",
+    "deskripsi": "Penyakit infeksi yang disebabkan oleh bakteri Mycobacterium tuberculosis.",
+    "spesialis": "Spesialis Paru-paru"
+  },
+  {
+    "prognosis": "Typus",
+    "deskripsi": "Penyakit infeksi akut yang disebabkan oleh bakteri Salmonella typhi.",
+    "spesialis": "Spesialis Penyakit Infeksi"
+  },
+  {
+    "prognosis": "Infeksi saluran kemih",
+    "deskripsi": "Kondisi yang terjadi ketika bakteri atau mikroorganisme lainnya menginfeksi bagian saluran kemih, yaitu organ-organ yang berperan dalam produksi, penyimpanan, dan pengeluaran urin dari tubuh.",
+    "spesialis": "Spesialis Penyakit Ginjal dan Urologi"
+  },
+  {
+    "prognosis": "Varises",
+    "deskripsi": "Kondisi di mana pembuluh darah vena menjadi melebar dan bergelombang.",
+    "spesialis": "Spesialis Jantung dan Pembuluh Darah"
+  }
+]

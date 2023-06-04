@@ -3,26 +3,35 @@ import os
 # import library 
 from flask import Flask, request
 from flask_restx import Resource
-import predictSymptom
-import apiModel
+from handler import predictHandler, glosariumHandler
+import model.apiModel as apiModel
 
 # Initialize Flask
 app = Flask(__name__)
 
+# API init
 api = apiModel.apiSwagger(app)
-ns = apiModel.namespaceApi(api)
+nsPredict = apiModel.namespaceApi(api, 'predict')
+nsGlosarium = apiModel.namespaceApi(api, 'glosarium')
 predictModel = apiModel.predictModel(api)
 
-@ns.route("/")
+# PREDICT ROUTE
+@nsPredict.route("/")
 class Prediction(Resource):
-    @ns.doc(description='Route Diagnose by symptom')
+    @nsPredict.doc(description='Route Diagnose by symptom')
     @api.expect(predictModel)
     def post(self):
         data = request.get_json()
-        return predictSymptom.predictSymptom(data)
+        return predictHandler.predictSymptom(data)
+
+
+# GLOSARIUM ROUTE    
+@nsGlosarium.route("/")
+class Glosarium(Resource):
+    @nsGlosarium.doc(description='Route glosarium')
     
     def get(self):  
-        return predictSymptom.getAllDignosis()
+        return glosariumHandler.getGlosarium()
     
 # Run app
 if __name__ == "__main__":

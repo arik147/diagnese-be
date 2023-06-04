@@ -2,7 +2,7 @@
 from flask import jsonify
 import tensorflow as tf
 import numpy as np
-import csv
+import json
 
 def predictSymptom(data):
     try:
@@ -221,12 +221,12 @@ def predictSymptom(data):
         # Return the prediction result
         return jsonify({
             'status': 'success',
-            'code': 201,
+            'code': 200,
             'message': 'Symptom prediction successful!',
             'data': {
-                'diagnosa': prediksi,
+                'prognosis': prediksi,
                 'deskripsi': deskripsi,
-                'dokter_spesialis': dokter_spesialis
+                'spesialis': dokter_spesialis
             }
         })
 
@@ -238,72 +238,13 @@ def predictSymptom(data):
             'message': 'Error predicting symptom!'
         })
     
-def getAllDignosis():
-    try:
-        diagnosis = [
-            'AIDS',
-            'Alergi',
-            'Artritis',
-            'Asma Bronkial',
-            'Cacar air',
-            'Demam berdarah',
-            'Diabetes',
-            'GERD',
-            'Gastroenteritis',
-            'Hemoroid dimorfik (ambeien)',
-            'Hepatitis A',
-            'Hepatitis Alkoholik',
-            'Hepatitis B',
-            'Hepatitis C',
-            'Hepatitis D',
-            'Hepatitis E',
-            'Hipertensi',
-            'Hipertiroidisme',
-            'Hipoglikemia',
-            'Hipotiroidisme',
-            'Impetigo',
-            'Infeksi jamur',
-            'Infeksi saluran kemih',
-            'Jerawat',
-            'Kolestasis kronis',
-            'Kuning (penyakit kuning)',
-            'Malaria',
-            'Migraine',
-            'Osteoartritis',
-            'Paralisis (pendarahan otak)',
-            'Penyakit ulkus peptikum',
-            'Pilek biasa',
-            'Pneumonia',
-            'Psoriasis',
-            'Reaksi obat',
-            'Serangan jantung',
-            'Spondilosis Serviks',
-            'Tuberculosis',
-            'Typus',
-            'Varises',
-            'Vertigo Posisional Paroksismal'
-        ]
-
-        # Return the prediction result
-        return jsonify({
-            'status': 'success',
-            'code': 201,
-            'message': 'fetch diagnosis successful!',
-            'data': diagnosis
-        })
-
-    except Exception as e:
-        print(str(e))
-        return jsonify({
-            'status': 'failed',
-            'code': 400,
-            'message': 'Error fetching diagnosis!'
-        })
-    
 def getDescriptionAndDoctor(prediksi):
-    with open('Deskripsi_dan_Dokter.csv') as file:
-        prognosis = csv.DictReader(file)
-        for row in prognosis:
-            if row['Prognosis'] == prediksi:
-                return row['Deskripsi'], row['Spesialis']
+    # open file
+    with open("glosarium.json", "r") as file:
+        data = json.load(file)
+        # check by label
+        for item in data:
+            if item['prognosis'] == prediksi:
+                return item['deskripsi'], item['spesialis']
+    # not found
     return "Penyakit tidak dikenali", "Tidak ada spesialis yang sesuai"
