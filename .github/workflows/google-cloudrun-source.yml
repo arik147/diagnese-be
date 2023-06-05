@@ -5,7 +5,7 @@ on:
     branches: [ "main" ]
 
 env:
-  PROJECT_ID: diagnese-capstone
+  PROJECT_ID: diagnese
   REGION: asia-southeast2
   # project-name but it can be anything you want
   REPO_NAME: diagnese-api-flask
