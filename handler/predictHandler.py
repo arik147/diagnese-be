@@ -6,8 +6,86 @@ import json
 
 def predictSymptom(data):
     try:
-        # Define the symptoms dictionary
-        my_symptom = {
+        # Define diagnosis and symptoms
+        symptoms = symptomsList()
+        diagnosis = diagnosisList()
+        
+        # Update the symptom dictionary with the received symptoms
+        symptoms.update(data)
+
+        # Load the model
+        model = tf.keras.models.load_model('model.h5')
+
+        # Convert the symptom dictionary values to a list
+        my_symptom_values = list(symptoms.values())
+
+        input_data = tf.convert_to_tensor([my_symptom_values], dtype=tf.float32)
+
+        # Make predictions using the loaded model
+        predictions = model.predict(input_data)
+
+        # Get max value in array predictions
+        max_value_index = np.argmax(predictions[0])
+
+        # get prediction label, doctor and description
+        prediksi = diagnosis[max_value_index]
+        deskripsi, dokter_spesialis = getDescriptionAndDoctor(prediksi)
+
+        # Return the prediction result
+        return jsonify({
+            'status': 'success',
+            'code': 200,
+            'message': 'Symptom prediction successful!',
+            'data': {
+                'prognosis': prediksi,
+                'deskripsi': deskripsi,
+                'spesialis': dokter_spesialis
+            }
+        })
+
+    except Exception as e:
+        print(str(e))
+        return jsonify({
+            'status': 'failed',
+            'code': 400,
+            'message': 'Error predicting symptom!'
+        })
+    
+def getDescriptionAndDoctor(prediksi):
+    # open file
+    with open("glosarium.json", "r") as file:
+        data = json.load(file)
+        # check by label
+        for item in data:
+            if item['prognosis'] == prediksi:
+                return item['deskripsi'], item['spesialis']
+    # not found
+    return "Penyakit tidak dikenali", "Tidak ada spesialis yang sesuai"
+
+def getSymptoms():
+    try:
+        # Load JSON from file
+        with open("symptoms.json", "r") as file:
+            data = json.load(file)
+
+        # Return the prediction result
+        return jsonify({
+            'status': 'success',
+            'code': 200,
+            'message': 'fetch symptoms successful!',
+            'data': data
+        })
+    
+    except Exception as e:
+        print(str(e))
+        return jsonify({
+            'status': 'failed',
+            'code': 400,
+            'message': 'Error fetching symptoms!'
+        })
+
+def symptomsList():
+    my_symptom = {
             'gatal': 0,
             'ruam_kulit': 0,
             'benjolan_pada_kulit': 0,
@@ -140,8 +218,10 @@ def predictSymptom(data):
             'luka_merah_di_sekitar_hidung': 0,
             'bekas_luka_berair': 0
         }
+    return my_symptom
 
-        diagnosis = [
+def diagnosisList():
+    diagnosis = [
             'AIDS',
             'Alergi',
             'Artritis',
@@ -184,67 +264,4 @@ def predictSymptom(data):
             'Varises',
             'Vertigo Posisional Paroksismal'
         ]
-
-        # Update the symptom dictionary with the received symptoms
-        my_symptom.update(data)
-
-        # Load the model
-        model = tf.keras.models.load_model('model.h5')
-
-        # Convert the symptom dictionary values to a list
-        my_symptom_values = list(my_symptom.values())
-
-        input_data = tf.convert_to_tensor([my_symptom_values], dtype=tf.float32)
-
-        # Make predictions using the loaded model
-        predictions = model.predict(input_data)
-
-        # Print the array prediction
-        # print(predictions)
-        # print(predictions[0])
-
-        # Get max value in array predictions
-        # max_value = np.max(predictions[0])
-
-        max_value_index = np.argmax(predictions[0])
-
-        # print(diagnosis[max_value_index])
-
-        # print(max_value)
-
-        prediksi = diagnosis[max_value_index]
-        deskripsi, dokter_spesialis = getDescriptionAndDoctor(prediksi)
-
-        # print("Deskripsi:", deskripsi)
-        # print("Rekomendasi dokter: Dokter", dokter_spesialis)
-
-        # Return the prediction result
-        return jsonify({
-            'status': 'success',
-            'code': 200,
-            'message': 'Symptom prediction successful!',
-            'data': {
-                'prognosis': prediksi,
-                'deskripsi': deskripsi,
-                'spesialis': dokter_spesialis
-            }
-        })
-
-    except Exception as e:
-        print(str(e))
-        return jsonify({
-            'status': 'failed',
-            'code': 400,
-            'message': 'Error predicting symptom!'
-        })
-    
-def getDescriptionAndDoctor(prediksi):
-    # open file
-    with open("glosarium.json", "r") as file:
-        data = json.load(file)
-        # check by label
-        for item in data:
-            if item['prognosis'] == prediksi:
-                return item['deskripsi'], item['spesialis']
-    # not found
-    return "Penyakit tidak dikenali", "Tidak ada spesialis yang sesuai"
+    return diagnosis

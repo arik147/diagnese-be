@@ -15,7 +15,7 @@ nsPredict = apiModel.namespaceApi(api, 'predict')
 nsGlosarium = apiModel.namespaceApi(api, 'glosarium')
 predictModel = apiModel.predictModel(api)
 
-# PREDICT ROUTE
+# ========= PREDICT route ============
 @nsPredict.route("/")
 class Prediction(Resource):
     @nsPredict.doc(description='Route Diagnose by symptom')
@@ -24,8 +24,10 @@ class Prediction(Resource):
         data = request.get_json()
         return predictHandler.predictSymptom(data)
 
+    def get(self):  
+        return predictHandler.getSymptoms()
 
-# GLOSARIUM ROUTE    
+# ========= GLOSARIUM route ============  
 @nsGlosarium.route("/")
 class Glosarium(Resource):
     @nsGlosarium.doc(description='Route glosarium')
