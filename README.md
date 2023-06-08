@@ -26,7 +26,7 @@ Welcome to our Diagnese API
     ```
     flask run
     ```
-8. Test the API using `Postman` with `POST` Method, route `/predict` and request body JSON : 
+8. Test the API using `Postman` with `POST` Method, route `/predict/` and request body JSON : 
     ```
     {
         "muntah": 1,
