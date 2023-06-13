@@ -17,7 +17,10 @@
       "goyah": 0,
       "satu_sisi_tubuh_melemah": 0,
       "perubahan_sensorium": 0,
-      "kurangnya_konsentrasi": 0
+      "kurangnya_konsentrasi": 0,
+      "demam_tinggi": 0,
+      "demam_ringan": 0,
+      "demam_tifoid": 0
     },
     "hidung": {
       "bersin_bersin": 0,
@@ -49,6 +52,8 @@
       "dahak_berdarah": 0
     },
     "badan": {
+      "menggigil": 0,
+      "merinding": 0,
       "nyeri_dada": 0,
       "sakit_punggung": 0,
       "kelelahan": 0,
@@ -57,12 +62,12 @@
       "tidak_enak_badan": 0,
       "anggota_tubuh_melemah": 0,
       "kram": 0,
-      "kegemukan": 0,
       "kaku_saat_ingin_bergerak": 0,
       "koma": 0,
       "kenaikan_berat_badan": 0,
       "penurunan_berat_badan": 0,
-      "sakit_perut": 0,
+      "sakit_perut_seluruh": 0,
+      "sakit_perut_bagian": 0,
       "asam_lambung": 0,
       "muntah": 0,
       "gangguan_pencernaan": 0,
@@ -90,15 +95,19 @@
       "ketidaknyamanan_kandung_kemih": 0,
       "bau_busuk_dari_urine": 0,
       "ingin_buang_air_kecil_terus": 0,
-      "air_kencing_berlebih": 0
+      "air_kencing_berlebih": 0,
+      "tangan_dan_kaki_dingin": 0,
+      "berkeringat": 0,
+      "obesity": 0
     },
     "kulit": {
       "memar": 0,
       "gatal": 0,
+      "gatal_internal": 0,
       "ruam_kulit": 0,
       "benjolan_pada_kulit": 0,
       "kulit_kekuningan": 0,
-      "bintik-bintik_merah_di_seluruh_tubuh": 0,
+      "bintik_bintik_merah_di_seluruh_tubuh": 0,
       "perubahan_warna_kulit_di_area_tertentu": 0,
       "jerawat_bernanah": 0,
       "komedo": 0,
@@ -110,7 +119,7 @@
     },
     "mental": {
       "anxiety": 0,
-      "gelisa": 0,
+      "gelisah": 0,
       "depresi": 0,
       "mudah_tersinggung": 0,
       "tidak_berenergi": 0,
