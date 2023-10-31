@@ -49,7 +49,7 @@ Welcome to our Diagnese API
     ```
 3. Open the app folder  
     ```
-    cd diagnese-api-flask/
+    cd diagnese-be/
     ```
 4. Build and submit a Docker image to Google Cloud Build
     ```

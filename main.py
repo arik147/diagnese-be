@@ -3,7 +3,8 @@ import os
 # import library 
 from flask import Flask, request
 from flask_restx import Resource
-from flask_cors import CORS  # Import the CORS extension
+from flask_cors import CORS
+
 from handler import predictHandler, glosariumHandler
 import model.apiModel as apiModel
 
