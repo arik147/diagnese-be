@@ -5,9 +5,11 @@ from flask import Flask, request
 from flask_restx import Resource
 from handler import predictHandler, glosariumHandler
 import model.apiModel as apiModel
+from flask_cors import CORS  # Import the CORS extension
 
 # Initialize Flask
 app = Flask(__name__)
+CORS(app)  # Enable CORS for your Flask app
 
 # API init
 api = apiModel.apiSwagger(app)
