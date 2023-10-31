@@ -10,7 +10,7 @@ Welcome to our Diagnese API
 # How to setup Locally
 1. Clone repository following this command
     ```
-    git clone https://github.com/arik147/diagnese-api-flask.git
+    git clone https://github.com/arik147/diagnese-be.git
     ```
 2. Install python3 (>3.9 or latest)
 3. Install pip (>18.1 or latest)
@@ -45,7 +45,7 @@ Welcome to our Diagnese API
     ```
 2. Clone repository following this command
     ```
-    git clone https://github.com/arik147/diagnese-api-flask.git
+    git clone https://github.com/arik147/diagnese-be.git
     ```
 3. Open the app folder  
     ```
@@ -53,9 +53,9 @@ Welcome to our Diagnese API
     ```
 4. Build and submit a Docker image to Google Cloud Build
     ```
-    gcloud builds submit --tag gcr.io/PROJECT_ID/diagnese-api-flask
+    gcloud builds submit --tag gcr.io/PROJECT_ID/diagnese-be
     ```
 5. Deploy a container image to Google Cloud Run
     ```
-    gcloud run deploy --image gcr.io/PROJECT_ID/diagnese-api-flask
+    gcloud run deploy --image gcr.io/PROJECT_ID/diagnese-be
     ```
