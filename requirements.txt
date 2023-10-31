@@ -1,5 +1,6 @@
 flask
 flask_restx
+flask_cors
 tensorflow
 numpy
 gunicorn==20.1.0
