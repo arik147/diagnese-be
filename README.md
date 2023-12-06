@@ -53,9 +53,9 @@ Welcome to our Diagnese API
     ```
 4. Build and submit a Docker image to Google Cloud Build
     ```
-    gcloud builds submit --tag gcr.io/PROJECT_ID/diagnese-be
+    gcloud builds submit --tag gcr.io/proyek-keahlian-diagnese/diagnese-be
     ```
 5. Deploy a container image to Google Cloud Run
     ```
-    gcloud run deploy --image gcr.io/PROJECT_ID/diagnese-be
+    gcloud run deploy --image gcr.io/proyek-keahlian-diagnese/diagnese-be
     ```
